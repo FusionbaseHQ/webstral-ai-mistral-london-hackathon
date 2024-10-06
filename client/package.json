@@ -1,0 +1,39 @@
+{
+  "name": "fb_client__public",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next telemetry disable && next dev -p 3005",
+    "build": "next telemetry disable && next build",
+    "start": "next start -p 3005",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@headlessui/react": "^1.7.17",
+    "@heroicons/react": "^2.0.13",
+    "@loadable/component": "^5.15.2",
+    "@tailwindcss/forms": "^0.5.2",
+    "framer-motion": "^11.11.1",
+    "next": "^13.5.4",
+    "nprogress": "^0.2.0",
+    "prop-types": "^15.8.1",
+    "react": "^18.3.1",
+    "react-copy-to-clipboard": "^5.1.0",
+    "react-dom": "^18.2.0",
+    "react-intersection-observer": "^9.13.1",
+    "react-json-view": "^1.21.3",
+    "react-markdown": "^9.0.0",
+    "react-syntax-highlighter": "^15.5.0",
+    "rehype-raw": "^7.0.0",
+    "remark-directive": "^3.0.0",
+    "remark-gfm": "^4.0.0"
+  },
+  "devDependencies": {
+    "@formatjs/cli": "^5.1.12",
+    "autoprefixer": "^10.4.8",
+    "eslint": "8.21.0",
+    "eslint-config-next": "^13.5.4",
+    "postcss": "^8.4.16",
+    "tailwindcss": "^3.1.8"
+  }
+}

@@ -1,0 +1,140 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  @apply h-full scroll-smooth
+}
+
+body, div#root, div#__next  {
+  @apply h-full text-text dark:text-textDark bg-[#FEFEFE] dark:bg-slate-900
+}
+
+/* CSS for nprogress */
+/* Make clicks pass-through */
+#nprogress {
+  pointer-events: none;
+}
+
+#nprogress .bar {
+  background: #4A89FF;
+
+  position: fixed;
+  z-index: 1031;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 2px;
+}
+
+/* Fancy blur effect */
+#nprogress .peg {
+  display: block;
+  position: absolute;
+  right: 0px;
+  width: 100px;
+  height: 100%;
+  box-shadow: 0 0 10px #4A89FF, 0 0 5px #4A89FF;
+  opacity: 1.0;
+
+  -webkit-transform: rotate(3deg) translate(0px, -4px);
+      -ms-transform: rotate(3deg) translate(0px, -4px);
+          transform: rotate(3deg) translate(0px, -4px);
+}
+
+/* OVERWRITE Scrollbars especially because of windows */
+
+/* width */
+/* Scrollbar sizing */
+::-webkit-scrollbar {
+    width: 8px; /* Increase width for a more Mac-like feel */
+    height: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 6px; /* Soften the edges of the track */
+}
+
+.dark ::-webkit-scrollbar-track {
+    background: #0f172a;
+    border-radius: 6px; /* Soften the edges of the track */
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, #b8b8b83d, #a1a1a13d); /* Lighter gradient colors for the thumb */
+    border-radius: 6px;
+
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(to bottom, #b8b8b8, #a1a1a1); /* Lighter on hover */
+    opacity: 0.8;
+}
+
+
+/* OVERWRITE vis-timeline Styling */
+
+.vis-timeline.vis-bottom.vis-ltr {
+ @apply border-none
+}
+
+.vis-time-axis .vis-text {
+@apply text-sm text-subtext dark:text-slate-400
+}
+
+.vis-time-axis .vis-grid.vis-minor {
+  @apply border-gray-200 dark:border-slate-600
+}
+
+.vis-time-axis .vis-grid.vis-major {
+  @apply border-gray-300 dark:border-slate-500
+}
+
+.vis-panel.vis-bottom, .vis-panel.vis-center, .vis-panel.vis-left, .vis-panel.vis-right, .vis-panel.vis-top {
+  @apply border-b-2 border-gray-300 dark:border-slate-500
+}
+
+.vis-item, .vis-item.vis-box  {
+  @apply text-text dark:text-slate-200 text-xs rounded-sm 
+}
+
+.vis-item.founded {
+  @apply bg-primary dark:bg-primary border-primary !text-body bg-opacity-90 
+}
+
+.vis-item.status-change {
+  @apply bg-primary dark:bg-primary border-primary !text-body bg-opacity-90 
+}
+
+.vis-item.vis-selected {
+  @apply !bg-primary !border-primary  font-medium
+}
+
+.vis-item.member-entry {
+  @apply bg-green-300 dark:bg-green-700 border-green-300 dark:border-green-700 bg-opacity-90
+}
+
+.vis-item.member-exited {
+  @apply bg-gray-300 dark:bg-slate-600 border-gray-300 dark:border-slate-600 bg-opacity-80
+}
+
+.vis-item.publication {
+  @apply bg-[#D1CC23] text-body dark:bg-slate-600 border-[#D1CC23] dark:border-slate-600 bg-opacity-90
+}
+
+.vis-item.name-change {
+  @apply !bg-[#91247D] text-body dark:bg-primary !border-[#91247D] dark:border-primary bg-opacity-90
+}
+
+.vis-item.address-change {
+  @apply bg-secondary text-body dark:bg-red-700 border-secondary dark:border-red-700 bg-opacity-90
+}
+
+.vis-item.capital-change {
+  @apply bg-[#F68C28] text-body dark:bg-yellow-700 border-[#F68C28] dark:border-yellow-700 bg-opacity-90
+}
